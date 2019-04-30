@@ -174,7 +174,7 @@ Process {
 				
 		# Supend Bitlocker if $OSVolumeEncypted is $true
 		if ($OSDriveEncrypted -eq $true) {
-			Write-CMLogEntry -Value "Suspending BitLocker protected volume: $($env:SystemDrive)" -Severity 	
+			Write-CMLogEntry -Value "Suspending BitLocker protected volume: $($env:SystemDrive)" -Severity 1
 			Manage-Bde -Protectors -Disable C:
 		}		
 		
